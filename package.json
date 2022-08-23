@@ -1,0 +1,22 @@
+{
+  "name": "tdl_ss_web_aut_day_2_extra",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aetheress/TDL_SS_WEB_AUT_DAY_2_EXTRA.git"
+  },
+  "author": "Ulvis Blathens",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aetheress/TDL_SS_WEB_AUT_DAY_2_EXTRA/issues"
+  },
+  "homepage": "https://github.com/Aetheress/TDL_SS_WEB_AUT_DAY_2_EXTRA#readme",
+  "devDependencies": {
+    "cypress": "^10.6.0"
+  }
+}
