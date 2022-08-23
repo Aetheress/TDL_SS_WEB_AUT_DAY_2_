@@ -3,17 +3,18 @@ import KatalonIndexPage from "../pageObjects/katalonIndexPage";
 import KatalonLoginPage from "../pageObjects/katalonLoginPage";
 import KatalonMakeAppointmentPage from "../pageObjects/katalonMakeAppointmentPage";
 import KatalonSummaryPage from "../pageObjects/katalonSummaryPage";
+import KatalonHistoryPage from "../pageObjects/katalonHistoryPage"
 
 describe("Day 2 extra task", () => {
     context("Test scenario", () => {
         beforeEach(() => {
             KatalonIndexPage.visit();
-        })
-        it("Test case 1", () => {
             KatalonIndexPage.makeAppointment.click();
             KatalonLoginPage.username.type("John Doe");
             KatalonLoginPage.password.type("ThisIsNotAPassword");
             KatalonLoginPage.login.click();
+        })
+        it("Test case 1", () => {
             KatalonMakeAppointmentPage.facility.select("Seoul CURA Healthcare Center");
             KatalonMakeAppointmentPage.readmission.click();
             KatalonMakeAppointmentPage.medicaid.click();
@@ -26,6 +27,12 @@ describe("Day 2 extra task", () => {
             KatalonSummaryPage.program.should("have.text", "Medicaid");
             KatalonSummaryPage.visitDate.should("have.text", "30/08/2022")
             KatalonSummaryPage.comment.should("have.text", "Placeholder");
+        });
+        it("Test case 2", () => {
+            KatalonMakeAppointmentPage.menu.click();
+            KatalonMakeAppointmentPage.sideBar.should("have.class", "active");
+            KatalonMakeAppointmentPage.history.click();
+            KatalonHistoryPage.appointments.should("have.text", "No appointment.")
         })
     })
 })
