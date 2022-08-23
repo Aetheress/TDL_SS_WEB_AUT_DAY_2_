@@ -24,18 +24,6 @@ class KatalonMakeAppointmentPage extends BasePage {
     static get bookAppointment() {
         return cy.get(`#btn-book-appointment`);
     }
-    static get blank() {
-        return cy.get(`.form-horizontal`);
-    }
-    static get menu() {
-        return cy.get(`#menu-toggle`)
-    }
-    static get sideBar() {
-        return cy.get(`#sidebar-wrapper`)
-    }
-    static get history() {
-        return cy.get(`[href^="history"]`);
-    }
 }
 
 export default KatalonMakeAppointmentPage;

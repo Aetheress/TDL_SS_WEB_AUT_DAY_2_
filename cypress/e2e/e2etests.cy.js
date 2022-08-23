@@ -29,9 +29,9 @@ describe("Day 2 extra task", () => {
             KatalonSummaryPage.comment.should("have.text", "Placeholder");
         });
         it("Test case 2", () => {
-            KatalonMakeAppointmentPage.menu.click();
-            KatalonMakeAppointmentPage.sideBar.should("have.class", "active");
-            KatalonMakeAppointmentPage.history.click();
+            BasePage.menu.click();
+            BasePage.sideBar.should("have.class", "active");
+            BasePage.history.click();
             KatalonHistoryPage.appointments.should("have.text", "No appointment.")
         })
     })

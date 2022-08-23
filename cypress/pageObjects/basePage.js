@@ -40,6 +40,16 @@ class BasePage {
     static closeAdvert() {
       return cy.get("#close-fixedban").should("be.visible").click();
     }
+
+    static get menu() {
+      return cy.get(`#menu-toggle`)
+  }
+  static get sideBar() {
+      return cy.get(`#sidebar-wrapper`)
+  }
+  static get history() {
+      return cy.get(`[href^="history"]`);
+  }
   }
   
   export default BasePage;
